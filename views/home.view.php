@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Workopia</title>
+    <title>QuestifyJobs</title>
   </head>
   <body class="bg-gray-100">
     <!-- Nav -->
     <header class="bg-blue-900 text-white p-4">
       <div class="container mx-auto flex justify-between items-center">
         <h1 class="text-3xl font-semibold">
-          <a href="index.html">Workopia</a>
+          <a href="index.html">QuestifyJobs</a>
         </h1>
         <nav class="space-x-4">
           <a href="login.html" class="text-white hover:underline">Login</a>
