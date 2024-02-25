@@ -10,5 +10,57 @@
     return __DIR__.'/'.$path;
 
  }
+/**
+ * Load a view 
+ * 
+ * @param string $name
+ * @return void
+ */
+function loadView($name){
+
+    $viewPath= basePath("views/{$name}.view.php");
+    // inspectExit($viewPath);
+    if(file_exists("$viewPath")){
+        require_once($viewPath);
+    } else {
+        echo "view '{$name} not found!' ";
+    }
+
+}
+
+/**
+ * Load a view 
+ * 
+ * @param string $name
+ * @return void
+ */
+function loadPartial($name){
+$partialview=basePath("views/partials/{$name}.php");
+       
+if(file_exists("$partialview")){
+    require_once($partialview);
+} else {
+    echo "Partial '{$name} not found!' ";
+}
+}
+/**
+ * Inspect a values and die
+ * 
+ * @param mixed $value
+ * 
+ * @return void 
+ * 
+ */
+
+ function inspect($value){
+    echo '<pre>';
+    die(var_dump($value));
+
+    echo '</pre>';
+
+ }
+ 
+
 
 ?>
+
