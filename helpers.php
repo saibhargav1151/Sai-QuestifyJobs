@@ -16,11 +16,12 @@
  * @param string $name
  * @return void
  */
-function loadView($name){
+function loadView($name, $data=[]){
 
     $viewPath= basePath("views/{$name}.view.php");
     // inspectExit($viewPath);
     if(file_exists("$viewPath")){
+        extract($data);
         require_once($viewPath);
     } else {
         echo "view '{$name} not found!' ";
@@ -60,7 +61,9 @@ if(file_exists("$partialview")){
 
  }
  
-
+function salary($salary){
+    return '$'. number_format(floatval($salary));
+}
 
 ?>
 

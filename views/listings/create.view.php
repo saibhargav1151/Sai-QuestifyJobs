@@ -128,7 +128,7 @@ loadPartial("navbar");
 
 
 
-<?php 
+    <?php 
 loadPartial("bottom-banner");
 loadPartial("footer");
   ?>
