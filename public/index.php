@@ -1,12 +1,15 @@
 <?php
+use Framework\Router;
+session_start();
+require __DIR__.'/../vendor/autoload.php';
 require_once '../helpers.php';
-require basePath('Router.php');
-require basePath('Database.php');
-// loadView('home');
-// inspect($method);
+
+
 $router=new Router();
 $routes=require basePath('routes.php');
-$uri=$_SERVER['REQUEST_URI'];
-$method=$_SERVER['REQUEST_METHOD'];
-$router->route($uri,$method);
+$uri=parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$router->route($uri);
+
+
+
 ?>

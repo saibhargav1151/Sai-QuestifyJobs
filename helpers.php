@@ -18,7 +18,7 @@
  */
 function loadView($name, $data=[]){
 
-    $viewPath= basePath("views/{$name}.view.php");
+    $viewPath= basePath("App/views/{$name}.view.php");
     // inspectExit($viewPath);
     if(file_exists("$viewPath")){
         extract($data);
@@ -36,7 +36,7 @@ function loadView($name, $data=[]){
  * @return void
  */
 function loadPartial($name){
-$partialview=basePath("views/partials/{$name}.php");
+$partialview=basePath("App/views/partials/{$name}.php");
        
 if(file_exists("$partialview")){
     require_once($partialview);
@@ -64,6 +64,13 @@ if(file_exists("$partialview")){
 function salary($salary){
     return '$'. number_format(floatval($salary));
 }
+function sanatizeData($dirty){
+    return filter_var(trim($dirty),FILTER_SANITIZE_SPECIAL_CHARS);
+}
 
+function redirect($url){
+    header("Location: $url");
+    exit;
+}
 ?>
 
